@@ -22,9 +22,9 @@
   </head>
   <body>
     <main>
-      <div class="container">
+      <div class="container" style="display: none">
         <div class="image-container">
-          <img src="#" alt="sign-up image" />
+          <img src="assets/images/illustration-sign-up-mobile.svg" alt="sign-up image" />
         </div>
         <div class="form-container">
           <form>
@@ -37,25 +37,34 @@
               <li>And much more!</li>
             </ul>
 
-            <label for="email-address"><b>Email address</b></label>
-            <br />
-            <input id="email-address" type="text" placeholder="email@company.com" />
+            <div>
+              <label for="email-address"><b>Email address</b></label>
+              <br />
+              <br />
+              <input id="email-address" type="text" placeholder="email@company.com" />
+            </div>
 
-            <button type="submit">Subscribe to monthly newsletter</button>
+            <input type="submit" value="Subscribe to monthly newsletter" />
           </form>
         </div>
       </div>
-      <div class="success-message" style="display: none">
-        <img src="#" alt="success-icon" />
+      <div class="success-container">
+        <div class="success-message-container">
+          <div class="success-image-container">
+            <img src="assets/images/icon-success.svg" alt="success-icon" />
+          </div>
 
-        <h1>Thanks for subscribing!</h1>
+          <h1>Thanks for subscribing!</h1>
 
-        <p>
-          A confirmation email has been sent to <strong>ash@loremcompany.com</strong>. Please open it and click the
-          button inside to confirm your subscription.
-        </p>
+          <p>
+            A confirmation email has been sent to <strong>ash@loremcompany.com</strong>. Please open it and click the
+            button inside to confirm your subscription.
+          </p>
+        </div>
 
-        <button class="dismiss-button">Dismiss message</button>
+        <div class="dismiss-button-container">
+          <button class="dismiss-button">Dismiss message</button>
+        </div>
       </div>
     </main>
 
