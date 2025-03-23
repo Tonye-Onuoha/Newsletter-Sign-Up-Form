@@ -27,12 +27,12 @@
   </head>
   <body>
     <main>
-      <div class="container">
+      <div id="container" class="container">
         <div class="image-container">
           <img src="assets/images/illustration-sign-up-mobile.svg" alt="sign-up image" />
         </div>
         <div class="form-container">
-          <form>
+          <form id="form" novalidate>
             <h1>Stay updated!</h1>
 
             <p>Join 60,000+ product managers receiving monthly updates on:</p>
@@ -43,18 +43,19 @@
             </ul>
 
             <div>
-              <label for="email-address"><b>Email address</b></label>
-              <br />
-              <br />
-              <input id="email-address" type="text" placeholder="email@company.com" />
+              <div class="label-container">
+                <label for="email-address"><b>Email address</b></label>
+                <span class="error-message" style="visibility: hidden">Valid email required</span>
+              </div>
+              <input id="email-input" type="email" placeholder="email@company.com" />
             </div>
 
-            <input type="submit" value="Subscribe to monthly newsletter" />
+            <input id="submit-button" type="submit" value="Subscribe to monthly newsletter" />
           </form>
         </div>
       </div>
-      <div class="success-container" style="display: none">
-        <div class="success-message-container">
+      <div id="sucess-container" style="display: none">
+        <div id="success-message-container">
           <div class="success-image-container">
             <img src="assets/images/icon-success.svg" alt="success-icon" />
           </div>
@@ -62,13 +63,13 @@
           <h1>Thanks for subscribing!</h1>
 
           <p>
-            A confirmation email has been sent to <strong>ash@loremcompany.com</strong>. Please open it and click the
-            button inside to confirm your subscription.
+            A confirmation email has been sent to <strong id="user-email">ash@loremcompany.com</strong>
+            . Please open it and click the button inside to confirm your subscription.
           </p>
         </div>
 
-        <div class="dismiss-button-container">
-          <button class="dismiss-button">Dismiss message</button>
+        <div id="dismiss-button-container">
+          <button id="dismiss-button" class="dismiss-button">Dismiss message</button>
         </div>
       </div>
     </main>
@@ -78,5 +79,6 @@
       >. Coded by <a href="https://github.com/Tonye-Onuoha"><b>Tonye Hugo Onuoha</b></a
       >.
     </div>
+    <script src="js/newsletter.js" type="module"></script>
   </body>
 </html>
