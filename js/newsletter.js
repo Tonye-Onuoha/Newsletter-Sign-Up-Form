@@ -15,7 +15,7 @@ form.addEventListener("submit", (e) => {
     if (!emailInput.value) {
         errorMessage.textContent = "Please enter an email address";
         errorMessage.style.visibility = "visible";
-        emailInput.style.outline = "2px solid #ff6155";
+        emailInput.style.outline = "2px solid hsl(4, 100%, 67%)";
         emailInput.style.backgroundColor = "pink";
         emailInput.style.color = "#ff6155";
         return;
@@ -26,7 +26,7 @@ form.addEventListener("submit", (e) => {
     if (!emailIsValid) {
         errorMessage.textContent = "Valid email required";
         errorMessage.style.visibility = "visible";
-        emailInput.style.outline = "2px solid #ff6155";
+        emailInput.style.outline = "2px solid hsl(4, 100%, 67%)";
         emailInput.style.backgroundColor = "pink";
         emailInput.style.color = "#ff6155";
     }
