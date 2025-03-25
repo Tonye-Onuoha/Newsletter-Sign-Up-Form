@@ -10,8 +10,7 @@ const errorMessage = document.querySelector(".error-message");
 
 // form event-listener.
 form.addEventListener("submit", (e) => {
-    e.preventDefault();
-    errorMessage.textContent = "";
+    e.preventDefault(); // prevent default reload action.
     // returns error-message if input value is empty.
     if (!emailInput.value) {
         errorMessage.textContent = "Please enter an email address";
@@ -21,7 +20,7 @@ form.addEventListener("submit", (e) => {
         emailInput.style.color = "#ff6155";
         return;
     }
-    // validate input value to email format.
+    // validate that input value conforms to email format.
     const emailIsValid = validateEmail(emailInput.value);
     // returns error-message if input is invalid email format.
     if (!emailIsValid) {
@@ -31,7 +30,7 @@ form.addEventListener("submit", (e) => {
         emailInput.style.backgroundColor = "pink";
         emailInput.style.color = "#ff6155";
     }
-    // returns success-message for smaller device screens if input is valid.
+    // returns success-message for smaller device-screens if input is valid.
     else if (emailIsValid && window.outerWidth < 920) {
         successContainer.className = "mobile-success-container";
         successMessageContainer.className = "mobile-success-message-container";
@@ -40,7 +39,7 @@ form.addEventListener("submit", (e) => {
         successContainer.style.display = "block";
         userEmail.textContent = emailInput.value;
     }
-    // returns success-message for larger device screens if input is valid.
+    // returns success-message for larger device-screens if input is valid.
     else if (emailIsValid && window.outerWidth >= 920) {
         successContainer.className = "desktop-success-container";
         successMessageContainer.className = "desktop-success-message-container";
@@ -56,7 +55,7 @@ dismissButton.addEventListener("click", () => {
     window.location.reload();
 });
 
-/* email-validator function. */
+/* email-validator function */
 const validateEmail = (value) => {
     const emailRegex = /^[a-zA-Z0-9]*[\._]?[a-zA-Z0-9]*@{1}[a-zA-Z]*_?[a-zA-Z]*\.{1}com$/;
     const isValid = emailRegex.test(value);

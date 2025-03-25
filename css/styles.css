@@ -179,9 +179,6 @@ button {
 
 .desktop-dismiss-button-container > button:hover {
     cursor: pointer;
-}
-
-.desktop-dismiss-button-container > button:focus {
     background-image: linear-gradient(to right, deeppink, #ff4500);
 }
 
